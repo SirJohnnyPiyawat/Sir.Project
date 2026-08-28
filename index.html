@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Piyawat Alexander | Saint Gabriel Engineering</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        racing: '#0B2B26',   /* British Racing Green */
+                        racingDark: '#051714',
+                        ivory: '#F9F6F0',    /* Warm Cream / Ivory Background */
+                        gold: '#C5A059',     /* Antique Gold / Brass Accent */
+                        leather: '#4A2E18',  /* Leather Brown Accent */
+                        charcoal: '#1A1A1A'  /* Dark Charcoal */
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Prompt', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #051714; }
+        ::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 4px; }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(11, 43, 38, 0.85), rgba(5, 23, 20, 0.95));
+        }
+    </style>
+</head>
+<body class="font-sans text-charcoal bg-ivory selection:bg-gold selection:text-racingDark">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-transparent py-5 border-b border-gold/20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-12">
+                <div class="flex-shrink-0">
+                    <a href="#home" class="font-serif text-2xl font-bold tracking-widest text-ivory hover:text-gold transition">
+                        P. <span class="text-gold italic font-normal">ALEXANDER</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 text-sm tracking-widest uppercase">
+                        <a href="#about" class="text-ivory/80 hover:text-gold transition-colors py-2 font-light">Heritage</a>
+                        <a href="#skills" class="text-ivory/80 hover:text-gold transition-colors py-2 font-light">Precision</a>
+                        <a href="#projects" class="text-ivory/80 hover:text-gold transition-colors py-2 font-light">The Garage</a>
+                        <a href="#contact" class="text-ivory/80 hover:text-gold transition-colors py-2 font-light">Contact</a>
+                    </div>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gold hover:text-ivory focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden hidden bg-racingDark text-ivory border-b border-gold/30">
+            <div class="px-4 pt-3 pb-6 space-y-2 uppercase text-xs tracking-widest">
+                <a href="#about" class="mobile-link block py-2 hover:text-gold border-b border-white/5">Heritage</a>
+                <a href="#skills" class="mobile-link block py-2 hover:text-gold border-b border-white/5">Precision</a>
+                <a href="#projects" class="mobile-link block py-2 hover:text-gold border-b border-white/5">The Garage</a>
+                <a href="#contact" class="mobile-link block py-2 hover:text-gold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="relative h-screen bg-cover bg-center flex items-center justify-center text-center" 
+            style="background-image: url('https://placehold.co/1920x1080/0b2b26/ffffff?text=Formula+Car+Aesthetics');">
+        <div class="absolute inset-0 hero-overlay"></div>
+        
+        <div class="relative z-10 px-6 max-w-4xl mx-auto text-ivory mt-10">
+            <p class="text-xs md:text-sm uppercase tracking-[0.3em] text-gold mb-4 font-medium">Saint Gabriel's College Candidate 2026</p>
+            <h1 class="font-serif text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight tracking-tight">
+                Piyawat Alexander Laurent <br/>
+                <span class="italic font-normal text-gold text-2xl md:text-4xl">Prakarapho Khamkamol</span>
+            </h1>
+            <p class="text-sm md:text-lg mb-10 text-ivory/80 max-w-2xl mx-auto font-light leading-relaxed">
+                "ขับเคลื่อนความฝันในโลก Formula Motorsport ด้วยพื้นฐานวิศวกรรมที่มั่นคง"<br/>
+                (Johnny Mew) ว่าที่นักเรียนเตรียมวิศวกรรมศาสตร์
+            </p>
+            <a href="#projects" class="inline-block border border-gold bg-gold/10 hover:bg-gold hover:text-racingDark text-gold font-medium py-3 px-10 rounded-none transition duration-500 uppercase tracking-widest text-xs">
+                Explore My Journey
+            </a>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 bg-ivory border-b border-gold/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">The Heritage</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-racing mb-4 mt-1">ตัวตนและแรงขับเคลื่อน</h2>
+                <div class="w-12 h-0.5 bg-gold mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-5/12 relative">
+                    <div class="absolute -inset-2 border border-gold/40 translate-x-3 translate-y-3 hidden md:block"></div>
+                    <img src="https://placehold.co/500x650/0b2b26/c5a059?text=Johnny+Mew+Portrait" alt="Johnny Mew" class="relative z-10 w-full shadow-2xl object-cover grayscale hover:grayscale-0 transition duration-700">
+                </div>
+                
+                <div class="w-full md:w-7/12">
+                    <h3 class="font-serif text-2xl md:text-3xl font-bold text-racing mb-6 italic">
+                        "สามารถระบุรุ่นรถได้ตั้งแต่ First Glance เพราะรถยนต์ไม่ใช่แค่พาหนะ แต่คืองานศิลปะทางวิศวกรรม"
+                    </h3>
+                    <p class="text-charcoal/80 leading-relaxed mb-4 font-light">
+                        ผมเกิดเมื่อวันที่ 22 ตุลาคม 2011 และเติบโตในกรุงเทพฯ ในครอบครัวธุรกิจส่วนตัวที่สอนให้ผมรู้จักคุณค่าของความพยายาม ผมหลงรักในรถยนต์ตั้งแต่จำความได้ ความฝันสูงสุดของผมคือการได้เป็น <strong>Formula Driver</strong> 
+                    </p>
+                    <p class="text-charcoal/80 leading-relaxed mb-4 font-light">
+                        แม้ว่าผมกำลังจะอายุ 15 ปีและเพิ่งเริ่มก้าวเข้าสู่วงการ Karting ซึ่งหลายคนอาจมองว่าช้า แต่สำหรับผม นี่คือ <strong>"ข้อได้เปรียบ"</strong> เพราะมันเปลี่ยนมุมมองของผมจากการเป็นแค่ผู้ขับขี่ กลายเป็นผู้ที่หลงใหลใน <strong>"ฟิสิกส์ การออกแบบผลิตภัณฑ์ และวิศวกรรม"</strong> ที่ซ่อนอยู่เบื้องหลังความเร็ว ปัจจุบันผมกำลังนำ Passion นี้มาสร้างสรรค์โปรเจกต์ <strong>"RaceSnap" (Sim Wheel for iPad)</strong> ซึ่งสะท้อนความมุ่งมั่นในการเรียนสายวิศวกรรมของผมได้อย่างชัดเจน
+                    </p>
+                    <p class="text-charcoal/80 leading-relaxed mb-8 font-light">
+                        นอกเหนือจากเรื่องความเร็ว ผมยังฝึกฝนความนิ่งและสมาธิผ่านกีฬาคลาสสิกอย่าง Golf, Tennis, Padel, Swimming และ Equestrian (ขี่ม้า) กีฬาเหล่านี้สอนให้ผมมีวินัย การควบคุมอารมณ์ และความสง่างามในการเผชิญความท้าทาย
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-gold/20">
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-gold font-semibold mb-1">ผลการเรียน (GPA)</p>
+                            <p class="font-serif text-base font-bold text-racing leading-tight">ม.1: 3.89, 3.87<br/>ม.2: 3.67, 3.81</p>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-gold font-semibold mb-1">ความถนัดพิเศษ</p>
+                            <p class="font-serif text-base font-bold text-racing leading-tight">English (IELTS 7.5)<br/>Product Engineering</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 bg-racing text-ivory relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Engineering Precision</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold mb-4 mt-1">ทักษะและศักยภาพ</h2>
+                <div class="w-12 h-0.5 bg-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div class="bg-racingDark/50 p-8 border border-gold/20">
+                    <h3 class="font-serif text-xl font-bold text-gold mb-6 flex items-center tracking-wide">
+                        <span class="w-2 h-2 bg-gold inline-block mr-3"></span>
+                        ACADEMIC PROFICIENCY
+                    </h3>
+                    
+                    <div class="space-y-6 text-sm">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="tracking-wider uppercase font-light">English Proficiency (IELTS 7.5 / CEFR B2)</span>
+                                <span class="text-gold font-serif">95%</span>
+                            </div>
+                            <div class="w-full bg-white/10 h-1">
+                                <div class="bg-gold h-1" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="tracking-wider uppercase font-light">คณิตศาสตร์และตรรกะ (Mathematics & Logic)</span>
+                                <span class="text-gold font-serif">92%</span>
+                            </div>
+                            <div class="w-full bg-white/10 h-1">
+                                <div class="bg-gold h-1" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="tracking-wider uppercase font-light">วิทยาศาสตร์และชีววิทยา (Applied Science)</span>
+                                <span class="text-gold font-serif">88%</span>
+                            </div>
+                            <div class="w-full bg-white/10 h-1">
+                                <div class="bg-gold h-1" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="tracking-wider uppercase font-light">การออกแบบผลิตภัณฑ์ (Product Design)</span>
+                                <span class="text-gold font-serif">90%</span>
+                            </div>
+                            <div class="w-full bg-white/10 h-1">
+                                <div class="bg-gold h-1" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-racingDark/50 p-8 border border-gold/20">
+                    <h3 class="font-serif text-xl font-bold text-gold mb-6 flex items-center tracking-wide">
+                        <span class="w-2 h-2 bg-gold inline-block mr-3"></span>
+                        ATHLETIC & MINDSET ATTRIBUTES
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 border border-gold/10 bg-racing">
+                            <h4 class="font-bold text-ivory mb-1">Strategic Thinking</h4>
+                            <p class="text-xs text-ivory/60 font-light">ทักษะการวางแผนและการตัดสินใจ (จากกีฬากอล์ฟ และ เทนนิส)</p>
+                        </div>
+                        <div class="p-4 border border-gold/10 bg-racing">
+                            <h4 class="font-bold text-ivory mb-1">Logical Deduction</h4>
+                            <p class="text-xs text-ivory/60 font-light">การแก้ปัญหาอย่างเป็นระบบ (จากการแข่งขัน Sudoku)</p>
+                        </div>
+                        <div class="p-4 border border-gold/10 bg-racing">
+                            <h4 class="font-bold text-ivory mb-1">Control & Balance</h4>
+                            <p class="text-xs text-ivory/60 font-light">การควบคุมความสมดุลและศูนย์ถ่วง (จากการขี่ม้า)</p>
+                        </div>
+                        <div class="p-4 border border-gold/10 bg-racing">
+                            <h4 class="font-bold text-ivory mb-1">Adaptability</h4>
+                            <p class="text-xs text-ivory/60 font-light">ไหวพริบและความอึด (จากกีฬา Padel และ ว่ายน้ำ)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-ivory">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Curated Portfolio</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-racing mb-4 mt-1">The Garage (10 ผลงานเด่น)</h2>
+                <div class="w-12 h-0.5 bg-gold mx-auto"></div>
+                <p class="mt-4 text-charcoal/60 text-sm">การผสานรวมศาสตร์แห่งความเร็ว ตรรกะ วิทยาศาสตร์ และวิศวกรรม</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-white border border-gold/20 group hover:border-gold transition duration-500 shadow-lg">
+                    <div class="overflow-hidden relative">
+                        <div class="absolute top-0 right-0 bg-gold text-racingDark text-[10px] font-bold px-3 py-1 z-10 tracking-widest uppercase">Highlight</div>
+                        <img src="https://placehold.co/600x400/0b2b26/c5a059?text=RaceSnap+Sim+Wheel" alt="RaceSnap Project" class="w-full h-48 object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-[10px] uppercase tracking-widest text-gold font-semibold">Product Engineering</p>
+                        <h4 class="font-serif text-lg font-bold text-racing mt-1 mb-2">RaceSnap: Sim Wheel For iPad</h4>
+                        <p class="text-charcoal/70 text-xs font-light leading-relaxed">พัฒนาและออกแบบพวงมาลัยจำลองสำหรับ iPad ผสานความหลงใหลใน Motorsport เข้ากับทักษะ Product Design สู่การใช้งานจริง</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gold/20 group hover:border-gold transition duration-500">
+                    <div class="overflow-hidden">
+                        <img src="https://placehold.co/600x400/0b2b26/c5a059?text=Sudoku+Silver+Medal" alt="Sudoku Silver Medal" class="w-full h-48 object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-[10px] uppercase tracking-widest text-gold font-semibold">Logical Achievement</p>
+                        <h4 class="font-serif text-lg font-bold text-racing mt-1 mb-2">เหรียญเงิน Sudoku คณิตศาสตร์วิชาการ ครั้งที่ 10</h4>
+                        <p class="text-charcoal/70 text-xs font-light leading-relaxed">ณ นครสวรรค์ ฮอลล์ รางวัลนี้สะท้อนทักษะการคิดเชิงตรรกะและการแก้ปัญหาซับซ้อน ซึ่งเป็นหัวใจสำคัญของวิศวกรรม</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gold/20 group hover:border-gold transition duration-500">
+                    <div class="overflow-hidden">
+                        <img src="https://placehold.co/600x400/0b2b26/c5a059?text=Fermented+Fruit+Yeast" alt="Biology Project" class="w-full h-48 object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-[10px] uppercase tracking-widest text-gold font-semibold">Biological Science</p>
+                        <h4 class="font-serif text-lg font-bold text-racing mt-1 mb-2">A Study of Bread Made from Fermented Fruit Yeast</h4>
+                        <p class="text-charcoal/70 text-xs font-light leading-relaxed">โครงงานวิทย์ฯ ศึกษาปฏิกิริยาชีวเคมีของการหมักยีสต์จากผลไม้ธรรมชาติ แสดงถึงความเชี่ยวชาญในกระบวนการทางวิทยาศาสตร์</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gold/20 group hover:border-gold transition duration-500">
+                    <div class="overflow-hidden">
+                        <img src="https://placehold.co/600x400/0b2b26/c5a059?text=Karting+Physics+Analysis" alt="Karting Physics" class="w-full h-48 object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-[10px] uppercase tracking-widest text-gold font-semibold">Physics Analysis</p>
+                        <h4 class="font-serif text-lg font-bold text-racing mt-1 mb-2">โครงงานวิเคราะห์ฟิสิกส์ของการเข้าโค้ง</h4>
+                        <p class="text-charcoal/70 text-xs font-light leading-relaxed">ศึกษาเรื่องแรงเหวี่ยง (Centrifugal Force) และการถ่ายเทน้ำหนัก เพื่อปูทางสู่ความเข้าใจในกีฬามอเตอร์สปอร์ต</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gold/20 group hover:border-gold transition duration-500">
+                    <div class="overflow-hidden">
+                        <img src="https://placehold.co/600x400/0b2b26/c5a059?text=Automotive+Encyclopedia" alt="Car Identification" class="w-full h-48 object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-[10px] uppercase tracking-widest text-gold font-semibold">Personal Expertise</p>
+                        <h4 class="font-serif text-lg font-bold text-racing mt-1 mb-2">บันทึกวิเคราะห์แบรนด์และดีไซน์ยานยนต์</h4>
+                        <p class="text-charcoal/70 text-xs font-light leading-relaxed">ความสามารถพิเศษในการจดจำและวิเคราะห์ DNA การออกแบบของรถยนต์แบรนด์ต่างๆ ทั่วโลกได้ทันทีจาก First Glance</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gold/20 group hover:border-gold transition duration-500">
+                    <div class="overflow-hidden">
+                        <img src="https://placehold.co/600x400/0b2b26/c5a059?text=Formula+1+Race+Strategy" alt="F1 Strategy" class="w-full h-48 object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-[10px] uppercase tracking-widest text-gold font-semibold">Analytical Study</p>
+                        <h4 class="font-serif text-lg font-bold text-racing mt-1 mb-2">วิเคราะห์กลยุทธ์การแข่ง Formula 1</h4>
+                        <p class="text-charcoal/70 text-xs font-light leading-relaxed">ศึกษาการคำนวณการใช้ยาง (Tire Degradation) และ Pit Stop Strategy ซึ่งสะท้อนการใช้คณิตศาสตร์สถิติในโลกความจริง</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gold/20 group hover:border-gold transition duration-500">
+                    <div class="overflow-hidden">
+                        <img src="https://placehold.co/600x400/0b2b26/c5a059?text=Equestrian+%26+Balance" alt="Equestrian" class="w-full h-48 object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-[10px] uppercase tracking-widest text-gold font-semibold">Sports & Discipline</p>
+                        <h4 class="font-serif text-lg font-bold text-racing mt-1 mb-2">การฝึกขี่ม้า (Equestrian)</h4>
+                        <p class="text-charcoal/70 text-xs font-light leading-relaxed">ฝึกฝนทักษะการควบคุมม้า ซึ่งต้องอาศัยการทรงตัว ความเข้าใจในจุดศูนย์ถ่วง (Center of Gravity) และสมาธิขั้นสูง</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gold/20 group hover:border-gold transition duration-500">
+                    <div class="overflow-hidden">
+                        <img src="https://placehold.co/600x400/0b2b26/c5a059?text=Golf+%26+Tennis+Strategy" alt="Golf & Tennis" class="w-full h-48 object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-[10px] uppercase tracking-widest text-gold font-semibold">Athletic Precision</p>
+                        <h4 class="font-serif text-lg font-bold text-racing mt-1 mb-2">ทักษะกีฬา Golf และ Tennis</h4>
+                        <p class="text-charcoal/70 text-xs font-light leading-relaxed">กีฬาที่ช่วยพัฒนากระบวนการคิดเชิงกลยุทธ์ (Strategic Thinking) ความแม่นยำทางสรีระ และความสง่างามในการแข่งขัน</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gold/20 group hover:border-gold transition duration-500">
+                    <div class="overflow-hidden">
+                        <img src="https://placehold.co/600x400/0b2b26/c5a059?text=Padel+%26+Swimming" alt="Padel & Swimming" class="w-full h-48 object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-[10px] uppercase tracking-widest text-gold font-semibold">Endurance Building</p>
+                        <h4 class="font-serif text-lg font-bold text-racing mt-1 mb-2">พัฒนาความอึดและไหวพริบ (Padel & Swim)</h4>
+                        <p class="text-charcoal/70 text-xs font-light leading-relaxed">ว่ายน้ำเพื่อสร้างความทนทานของร่างกาย และเล่น Padel เพื่อฝึก Reflex การตอบสนอง ซึ่งจำเป็นต่อนักแข่งและวิศวกร</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gold/20 group hover:border-gold transition duration-500">
+                    <div class="overflow-hidden">
+                        <img src="https://placehold.co/600x400/0b2b26/c5a059?text=Family+Business+Support" alt="Family Business" class="w-full h-48 object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-[10px] uppercase tracking-widest text-gold font-semibold">Real-world Skill</p>
+                        <h4 class="font-serif text-lg font-bold text-racing mt-1 mb-2">เรียนรู้การจัดการจากธุรกิจครอบครัว</h4>
+                        <p class="text-charcoal/70 text-xs font-light leading-relaxed">ช่วยงานธุรกิจส่วนตัวของครอบครัว ทำให้เข้าใจเรื่องความรับผิดชอบ การสื่อสาร และมูลค่าของความเพียรพยายาม</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-racingDark text-ivory pt-20 pb-10 border-t border-gold/30">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-gold/20 pb-16">
+                <div>
+                    <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Inquiries</span>
+                    <h3 class="font-serif text-3xl md:text-4xl font-bold mt-2 mb-4">ติดต่อ / สอบถามข้อมูลเพิ่มเติม</h3>
+                    <p class="text-ivory/60 text-sm font-light mb-8 max-w-md">
+                        หากคณะกรรมการคัดเลือกโรงเรียนเซนต์คาเบรียลต้องการข้อมูลเพิ่มเติมเกี่ยวกับโปรเจกต์ RaceSnap หรือพิจารณาสัมภาษณ์ สามารถติดต่อผมได้ตามช่องทางนี้ครับ 
+                    </p>
+                    <div class="space-y-3 text-sm font-light">
+                        <p class="flex items-center"><span class="text-gold font-serif mr-3">TEL:</span> 08X-XXX-XXXX</p>
+                        <p class="flex items-center"><span class="text-gold font-serif mr-3">EMAIL:</span> piyawat.alexander@example.com</p>
+                        <p class="flex items-center"><span class="text-gold font-serif mr-3">LOCATION:</span> Bangkok, Thailand</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col justify-end items-start md:items-end">
+                    <div class="text-left md:text-right">
+                        <p class="font-serif text-2xl font-bold tracking-widest text-gold mb-2">SAINT GABRIEL'S COLLEGE</p>
+                        <p class="text-xs uppercase tracking-widest text-ivory/50">High School Engineering Program Admission 2026</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 flex flex-col md:flex-row items-center justify-between text-xs text-ivory/40 font-light">
+                <p>&copy; 2026 Piyawat Alexander Laurent P. Khamkamol (Johnny Mew). All Rights Reserved.</p>
+                <p class="mt-2 md:mt-0 italic font-serif">Fueled by Passion, Engineered for Success.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-racingDark', 'shadow-2xl', 'py-3');
+                navbar.classList.remove('bg-transparent', 'py-5');
+            } else {
+                navbar.classList.remove('bg-racingDark', 'shadow-2xl', 'py-3');
+                navbar.classList.add('bg-transparent', 'py-5');
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
